@@ -19,7 +19,7 @@
           <div class="rows">
             <img src="wake_up.jpg" alt="Image-Not-Found" class="smallicon" />
             <p class="names">Set Wake Up Time</p>
-            <select name="" id="">
+            <select name="wake" id="wake">
               <option value="0">12 AM - 01 AM</option>
               <option value="1">01 AM - 02 AM</option>
               <option value="2">02 AM - 03 AM</option>
@@ -52,7 +52,7 @@
           <div class="rows r">
             <img src="lunch_time.jpg" alt="Image-Not-Found" class="smallicon" />
             <p class="names">Set lunch time</p>
-            <select>
+            <select name="lunch" id="lunch">
               <option value="0">12 AM - 01 AM</option>
               <option value="1">01 AM - 02 AM</option>
               <option value="2">02 AM - 03 AM</option>
@@ -85,7 +85,7 @@
           <div class="rows">
             <img src="nap_time.jpg" alt="Image-Not-Found" class="smallicon" />
             <p class="names">Set nap time</p>
-            <select name="" id="">
+            <select name="nap" id="nap">
               <option value="0">12 AM - 01 AM</option>
               <option value="1">01 AM - 02 AM</option>
               <option value="2">02 AM - 03 AM</option>
@@ -118,7 +118,7 @@
           <div class="rows">
             <img src="Night.png" alt="Image-Not-Found" class="smallicon" />
             <p class="names">Set night time</p>
-            <select name="" id="">
+            <select name="night" id="night">
               <option value="0">12 AM - 01 AM</option>
               <option value="1">01 AM - 02 AM</option>
               <option value="2">02 AM - 03 AM</option>
@@ -148,16 +148,16 @@
         </div>
       </div>
       <div class="greetings">
-        <h1>GOOD MORNING SAI</h1>
+        <h1 id="greetings">GOOD MORNING SAI</h1>
       </div>
 
-      <button>Set Alarm</button>
+      <button onmouseover="changetext()" id="changetext" onmouseout="changetextout()" class="button">Set Alarm</button>
 
       <div class="settimings">
-        <p>Wake Up Time:</p>
-        <p>Lunch Time:</p>
-        <p>Nap Time:</p>
-        <p>Night Time:</p>
+        <p>Wake Up Time: <span id="wakes"></span></p>
+        <p>Lunch Time: <span id="lunchs"></span></p>
+        <p>Nap Time: <span id="naps"></span></p>
+        <p>Night Time: <span id="nights"></span></p>
       </div>
     </div>
 
@@ -173,21 +173,21 @@
             </div>
             <div class="timecontent">
               <div class="child1 times">
-                <h2>10</h2>
+                <h2 id="hour">  bb        </h2>
                 <p>hours</p>
               </div>
               <p style="font-size: x-large;">:</p>
               <div class="child2 times">
-                <h2>10</h2>
+                <h2 id="minute"></h2>
                 <p>mins</p>
               </div>
               <p style="font-size: x-large;">:</p>
               <div class="child3 times">
-                <h2>20</h2>
+                <h2 id="seconds"></h2>
                 <p>secs</p>
               </div>
               <div class="child4 times AM">
-                <h2>AM</h2>
+                <h2 id="mer"></h2>
                 
               </div>
             </div>
@@ -205,14 +205,15 @@
       </div>
 
       <div class="message common">
-        <h1>GRAB SOME HEALTHY BREAKFAST</h1>
+        <h1 id="messages">GRAB SOME HEALTHY BREAKFAST</h1>
       </div>
       <div>
-        <img src="Component31.jpg" alt="" class="image common">
+        <img src="morning_image.jpg   " alt="" class="image common" id="image">
 
       </div>
     </div>
   </div>
+  <script src="time.js"></script>
 </body>
 
 </html>
