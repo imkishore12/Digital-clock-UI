@@ -1,14 +1,24 @@
 
 function getTime(){
 const d = new Date();
-let text = d.toLocaleTimeString();
-document.getElementById("hour").innerHTML = addZero(d.getHours());
+
+document.getElementById("hour").innerHTML = addZero(twl(d.getHours()));
 document.getElementById("minute").innerHTML = addZero(d.getMinutes());
 document.getElementById("seconds").innerHTML = addZero(d.getSeconds());
-document.getElementById("mer").innerHTML = text[9]+text[10];
+if(d.getHours()>=12){
+    document.getElementById("mer").innerHTML="PM";
+}
+else{
+    document.getElementById("mer").innerHTML="AM";
+}
 setInterval("getTime()",1000)
 }
 getTime()
+function twl(p){
+    if(p>12){
+        return p-12;
+    }
+}
 function addZero(i) {
     if (i < 10) {
         i="0"+i;
